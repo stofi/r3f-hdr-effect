@@ -20,7 +20,8 @@ export default function Scene() {
 
       <Environment preset='sunset' background={false}></Environment>
 
-      <Sphere color={sphereColor} />
+      <Sphere color={sphereColor} position={[-1.5, 0, 0]} />
+      <Sphere color={sphereColor} position={[1.5, 0, 0]} hdr />
 
       <mesh receiveShadow rotation-x={-Math.PI * 0.5} position-y={-0.001}>
         <planeGeometry args={[10, 10]} />

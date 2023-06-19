@@ -11,5 +11,5 @@ void main() {
     // csm_AO = 0.5;
     csm_DiffuseColor.rgb = vec3(1.,0.,0.);
     // csm_DiffuseColor.rgb = vec3(1.,1.,1.);
-    // csm_DiffuseColor.rgb *=2.;
+    csm_DiffuseColor.rgb *=2.;
 }

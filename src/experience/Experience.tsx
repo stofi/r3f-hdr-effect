@@ -8,15 +8,16 @@ import { Leva } from 'leva'
 import { Perf } from 'r3f-perf'
 
 import Scene from '#/Scene'
+import Effects from '$/Effects'
 
 export default function Experience(props: { enableDebug?: boolean }) {
   return (
     <>
       <Leva hidden={!props.enableDebug} />
       <Canvas
-        flat={false}
+        flat={true}
         shadows={true}
-        dpr={1}
+        dpr={2}
         camera={{
           position: [5, 5, 5],
         }}
@@ -31,6 +32,7 @@ export default function Experience(props: { enableDebug?: boolean }) {
         )}
         <Suspense>
           <Physics>
+            <Effects />
             {props.enableDebug && <Debug />}
             <Scene />
           </Physics>
