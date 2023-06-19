@@ -23,17 +23,9 @@ export default function Experience(props: { enableDebug?: boolean }) {
         }}
       >
         <color args={['lightblue']} attach='background' />
-        {props.enableDebug && (
-          <>
-            <axesHelper args={[5]} />
-            <Perf position='top-left' />
-            <PerformanceMonitor />
-          </>
-        )}
         <Suspense>
           <Physics>
             <Effects />
-            {props.enableDebug && <Debug />}
             <Scene />
           </Physics>
         </Suspense>

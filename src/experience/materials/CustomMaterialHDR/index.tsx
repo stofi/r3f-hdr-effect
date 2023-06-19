@@ -39,14 +39,14 @@ export default function CustomMaterial(props: { color?: string }) {
     t1: {
       value: 0.0,
       min: 0,
-      max: 1,
+      max: 2,
     },
   })
 
   const updateUniforms = () => {
     if (!materialRef.current) return
 
-    // materialRef.current.uniforms['uT_1'].value = t1
+    materialRef.current.uniforms['uT_1'].value = t1
   }
 
   useFrame(() => {
@@ -60,7 +60,9 @@ export default function CustomMaterial(props: { color?: string }) {
       ref={materialRef}
       vertexShader={vertexShader}
       fragmentShader={fragmentShader}
-      uniforms={{}}
+      uniforms={{
+        uT_1: { value: t1 },
+      }}
     />
   )
 }
