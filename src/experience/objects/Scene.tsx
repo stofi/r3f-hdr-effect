@@ -18,7 +18,7 @@ export default function Scene() {
 
       <hemisphereLight intensity={0.5} args={['lightblue', 'lightgreen']} />
 
-      <Environment preset='sunset' background={false}></Environment>
+      {/* <Environment preset='sunset' background={false}></Environment> */}
 
       <Sphere color={sphereColor} position={[-1.5, 0, 0]} />
       <Sphere color={sphereColor} position={[1.5, 0, 0]} hdr />
